@@ -17,13 +17,14 @@ export default {
         document.title = 'Success | VOTL'
         
 /* This refreshes the success page so that the cart 
-count will reset back to 0 after submitting an order to Stripe 
+count will reset back to 0 after submitting an order to Stripe */
         if (localStorage.getItem('reloaded')) {
             localStorage.removeItem('reloaded');
         } else {
         localStorage.setItem('reloaded', '1');
         location.reload();
-        } */
+        vm.$forceUpdate();
+        } 
     },
 }
 </script>
